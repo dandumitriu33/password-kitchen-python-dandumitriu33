@@ -52,7 +52,7 @@ def verify_password():
     if request.method == 'POST':
         user_password = request.form['verify-password']
         user_hashed_password = request.form['verify-hashed-password']
-        if user_hashed_password == data_manager.hash_password(user_password):
+        if data_manager.verify_password(user_password, user_hashed_password):
             background_color = '#43a047'
             return render_template('home.html',
                                    background_color=background_color,
