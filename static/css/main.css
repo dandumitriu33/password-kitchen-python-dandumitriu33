@@ -1,0 +1,16 @@
+html {
+    color: #fff;
+    text-align: center;
+}
+
+table.center {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* CLASSES */
+
+.table-container {
+    display: grid;
+}
