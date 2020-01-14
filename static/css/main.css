@@ -1,6 +1,8 @@
 html {
+    font-family: 'Montserrat', sans-serif;
     color: #fff;
     text-align: center;
+    font-size: large;
 }
 
 table.center {
@@ -9,8 +11,55 @@ table.center {
     margin-right: auto;
 }
 
+
+input[type='text'], textarea {
+    font-size: large;
+    width: 310px;
+    padding: 15px;
+    border: 2px solid #01579b;
+    border-radius: 4px;
+}
+
+input[type='submit'] {
+    font-size: large;
+    width: 344px;
+    padding: 15px;
+    background-color: #1976d2;
+    color: #fff;
+    border: 2px solid #01579b;
+    border-radius: 4px;
+}
+
+
+body {
+    display: grid;
+    justify-items: center;
+}
+
 /* CLASSES */
 
-.table-container {
+.card-container {
     display: grid;
+    grid-gap: 40px;
+    grid-template-columns: 400px 400px;
+    grid-auto-rows: auto;
 }
+
+.card1 {
+    border-radius: 4px;
+    background-color: #fff;
+    font-size: large;
+    color: #222;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, .9)
+}
+
+.card2 {
+    border-radius: 4px;
+    background-color: #fff;
+    font-size: large;
+    color: #222;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, .9)
+}
+
+
+

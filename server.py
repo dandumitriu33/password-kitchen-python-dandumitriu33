@@ -54,16 +54,20 @@ def verify_password():
         user_hashed_password = request.form['verify-hashed-password']
         if data_manager.verify_password(user_password, user_hashed_password):
             background_color = '#43a047'
+            message = "It's a match!"
             return render_template('home.html',
                                    background_color=background_color,
                                    verify_password=user_password,
-                                   verify_hashed_password=user_hashed_password)
+                                   verify_hashed_password=user_hashed_password,
+                                   message=message)
         else:
             background_color = '#e53935'
+            message = "Doesn't match :("
             return render_template('home.html',
                                    background_color=background_color,
                                    verify_password=user_password,
-                                   verify_hashed_password=user_hashed_password)
+                                   verify_hashed_password=user_hashed_password,
+                                   message=message)
 
 
 if __name__ == '__main__':

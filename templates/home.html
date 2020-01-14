@@ -16,32 +16,30 @@
 
     <h1>Password Kitchen</h1>
 
-        <div class="table-container">
-            <table>
-
-                <td>
-                    <form action="{{ url_for('hash_password') }}" method="POST">
-                        <input type="text" name="password" value="{{ password }}" placeholder="password"><br>
-                        <input type="submit" value="Hash it!"><br>
-                        <textarea name="hashed-password" rows="5" cols="45" placeholder="hash">{{ hashed }}</textarea><br>
-                    </form>
-                </td>
-
-                <td>
-                    <form action="{{ url_for('verify_password') }}" method="POST">
-                        <input type="text" name="verify-password" value="{{ verify_password }}" placeholder="password"><br>
-                        <input type="submit" value="Verify it!"><br>
-                        <textarea name="verify-hashed-password" rows="5" cols="45" placeholder="hash">{{ verify_hashed_password }}</textarea><br>
-
-                        {% if match_message %}
-                            <p>{{ match_message }}</p>
-                        {% endif %}
-
-                    </form>
-                </td>
-
-            </table>
+    <div class="card-container">
+        <div class="card1">
+            <h1>Hash</h1>
+                <form action="{{ url_for('hash_password') }}" method="POST">
+                    <p><input type="text" name="password" value="{{ password }}" placeholder="password"></p>
+                    <p><input type="submit" value="Hash it!" class="card-button"></p>
+                    <p><textarea name="hashed-password" rows="5" cols="45" placeholder="hash">{{ hashed }}</textarea></p>
+                </form>
         </div>
+
+        <div class="card2">
+            <h1>Verify</h1>
+                <form action="{{ url_for('verify_password') }}" method="POST">
+                    <p><input type="text" name="verify-password" value="{{ verify_password }}" placeholder="password"></p>
+                    <p><textarea name="verify-hashed-password" rows="5" cols="45" placeholder="hash">{{ verify_hashed_password }}</textarea></p>
+                    <p><input type="submit" value="Verify it!" class="card-button"></p>
+
+                    {% if message %}
+                        <h1 style= "color: {{ background_color }}">{{ message }}</h1>
+                    {% endif %}
+
+                </form>
+        </div>
+    </div>
 
 </body>
 
