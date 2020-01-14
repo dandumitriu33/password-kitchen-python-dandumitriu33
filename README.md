@@ -1,5 +1,9 @@
 # Password Kitchen
 
+Solution preview.
+
+![alt text](static/img/preview.jpg?raw=true)
+
 ## Intro
 
 This is a small project to hash passwords and verify hashed passwords.
